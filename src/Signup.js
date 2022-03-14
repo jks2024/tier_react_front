@@ -72,7 +72,7 @@ const Signup = () =>{
         }
     }
     const onClickLogin = () => {
-        console.log("clock login");
+        console.log("Click 회원가입");
     }
 
     return(

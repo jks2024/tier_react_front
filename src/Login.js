@@ -40,7 +40,7 @@ const Login = () => {
         }        
     }
     const onClickLogin = () => {
-        console.log("clock login");
+        console.log("클릭  로그인");
     }
 
     return (
