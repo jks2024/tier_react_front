@@ -48,7 +48,7 @@ const Signup = () =>{
     const onChangeConPw = (e) => {
         const passwordCurrent = e.target.value ;
         setInputConPw(passwordCurrent)
-        if (passwordCurrent != inputPw) {
+        if (passwordCurrent !== inputPw) {
             setConPwMessage('비밀 번호가 일치하지 않습니다.')
             setIsConPw(false)
         } else {
@@ -58,13 +58,22 @@ const Signup = () =>{
     }
 
     const onChangeFirstName = (e) => {
-
+        setInputFirstName(e.target.value);
     }
 
     const onChangeLastName = (e) => {
-
+        setInputLastName(e.target.value);
     }
 
+    const onChangePhone = (e) => {
+        const regex = /^[0-9\b -]{0,13}$/;
+        if (regex.test(e.target.value)) {
+            setInputPhone(e.target.value);
+        }
+    }
+    const onClickLogin = () => {
+        console.log("clock login");
+    }
 
     return(
     <div>
@@ -104,7 +113,12 @@ const Signup = () =>{
                 <input className="input" placeholder="이름" value ={inputLastName} onChange={onChangeLastName}/>
             </div>
             <div className="item2">
-                <input className="input" placeholder="전화번호"/>
+                <input className="input" placeholder="전화번호" value ={inputPhone} onChange={onChangePhone}/> 
+            </div>
+            <div className="item2">
+                {(isId && isPw && isConPw) ? 
+                <button className="enable_button" onClick={onClickLogin}>NEXT</button> :
+                <button className="disable_button" onClick={onClickLogin}>NEXT</button>}
             </div>
         </div>
     </div>
