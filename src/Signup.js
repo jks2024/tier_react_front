@@ -45,6 +45,27 @@ const Signup = () =>{
         }        
     }
 
+    const onChangeConPw = (e) => {
+        const passwordCurrent = e.target.value ;
+        setInputConPw(passwordCurrent)
+        if (passwordCurrent != inputPw) {
+            setConPwMessage('비밀 번호가 일치하지 않습니다.')
+            setIsConPw(false)
+        } else {
+            setConPwMessage('비밀 번호가 일치 합니다. )')
+            setIsConPw(true);
+        }      
+    }
+
+    const onChangeFirstName = (e) => {
+
+    }
+
+    const onChangeLastName = (e) => {
+
+    }
+
+
     return(
     <div>
         <div className="container">
@@ -67,15 +88,20 @@ const Signup = () =>{
             <div className="hint">
                     {inputPw.length > 0 && (
                     <span className={`message ${isPw ? 'success' : 'error'}`}>{pwMessage}</span>)}
-                </div>
-            <div className="item2">
-                <input className="input" placeholder="패스워드 확인"/>
             </div>
             <div className="item2">
-                <input className="input" placeholder="성"/>
+                <input className="input" placeholder="패스워드 확인" value ={inputConPw} onChange={onChangeConPw}/>
+            </div>
+            <div className="hint">
+                    {inputPw.length > 0 && (
+                    <span className={`message ${isConPw ? 'success' : 'error'}`}>{conPwMessage}</span>)}
+            </div>
+
+            <div className="item2">
+                <input className="input" placeholder="성" value ={inputFirstName} onChange={onChangeFirstName}/>
             </div>
             <div className="item2">
-                <input className="input" placeholder="이름"/>
+                <input className="input" placeholder="이름" value ={inputLastName} onChange={onChangeLastName}/>
             </div>
             <div className="item2">
                 <input className="input" placeholder="전화번호"/>
