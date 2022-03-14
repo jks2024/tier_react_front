@@ -65,7 +65,7 @@ const Login = () => {
                 <div className="item3">
                     <label>
                         <input className="check" type="checkbox" id="test1" name="scales" />
-                        <span>Stay Signed in</span>
+                        <span className="stay">Stay Signed in</span>
                     </label>
                     <Link to="/FindId" className="find_id">
                         <span>Forgot Your ID/Password?</span>
