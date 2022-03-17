@@ -63,7 +63,7 @@ const Signup = () =>{
 
     const onChangeLastName = (e) => {
         setInputLastName(e.target.value);
-    }
+    } 
 
     const onChangePhone = (e) => {
         const regex = /^[0-9\b -]{0,13}$/;

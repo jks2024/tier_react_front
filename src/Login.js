@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import './App.css';
 import imgLogo from './images/tier_logo.png'
 import imgBottom from './images/nedbank_s.png'
+import FrontApi from './api/frontApi';
+import useStore from './zustand/UserInfo';
 
 const Login = () => {
     // 키보드 입력
@@ -16,6 +18,26 @@ const Login = () => {
     // 유효성 검사
     const [isId, setIsId] = useState("");
     const [isPw, setIsPw] = useState("");
+
+    // 자동 로그인
+    const [isAuto, setIsAuto] = useState(true);
+
+    // Test
+    const [test, setTest] = useState(0);
+    const isCount = useStore((state) => state.count)  // Zustand Test
+
+    useEffect(() => {
+        const getData = async () => {
+            let result = await FrontApi.getNotice(1, "en", 0);
+            setTest(result.data.list[0]);    
+        }
+        getData()
+    });
+
+    const autoSign = () => {
+        setIsAuto(isAuto => !isAuto);
+        console.log(isAuto)
+    }
 
     const onChangId = (e) => {
         setInputId(e.target.value)
@@ -64,7 +86,7 @@ const Login = () => {
                 </div>
                 <div className="item3">
                     <label>
-                        <input className="check" type="checkbox" id="test1" name="scales" />
+                        <input className="check" type="checkbox" id="test1" name="scales" onClick={useStore((state) => state.setCount)}/>
                         <span className="stay">Stay Signed in</span>
                     </label>
                     <Link to="/FindId" className="find_id">
@@ -82,6 +104,7 @@ const Login = () => {
                         <span>Sign Up</span>
                     </Link>
                 </div>
+                <p>Count : {isCount}</p>
                 <div className="bdlogo">
                     <img src={imgBottom} alt="NedBank" />
                 </div>    
