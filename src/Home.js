@@ -41,11 +41,11 @@ const GoHome = () => {
                     <span className="infotypo2">No card registered</span>
                 </div>
                 <div className="addpay">
-                    <img scr={moreAdd} className="addpayimg" alt="plus" />
+                    <img src={moreAdd} className="addpayimg" alt="plus"/>
                     <span className="addpaytypo">Add payment method</span>
                 </div>
                 <div className="event">
-                    <img scr={threeCoin} className="eventimg" alt="coins" />
+                    <img src={threeCoin} className="eventimg" alt="coins"/>
                     <span className="eventtypo1">EVENT</span>
                     <span className="eventtypo2">Check attendance and get free points! The accumulated points can be used like cash.</span>
                 </div>
