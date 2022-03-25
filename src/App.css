@@ -175,13 +175,13 @@
 }
 
 .container .mainhead .logo2 {
-  background-color: orange;
+  
   margin-top: 28px;
   margin-left: 30px;
 }
 
 .container .mainhead .bell {
-  background-color: orange;
+  
   margin-top: 28px;
   margin-right: 30px;
 }
@@ -200,14 +200,33 @@
   border: 0.5px solid #D9D9D9;
   border-radius: 10px;
   opacity: 1;
-  align-items: center
+  align-items: center;
+}
+
+.container .linkage:active {
+  display: flex;
+  position: absolute;
+  height: 104px;
+  top: 94px;
+  left: 6%;
+  right: 6%;
+  margin: auto;
+
+  background: #FCD16D 0% 0% no-repeat padding-box;
+  box-shadow: 2px 5px 5px #0000000D;
+  border: 0.5px solid;
+  border-radius: 10px;
+  opacity: 1;
+  align-items: center;
+
 }
 
 .container .linkage .nedlogo {
   float: left;
   margin-top: 15px;
   margin-bottom: 15px;
-  margin-left: 11px;
+  margin-left: 4%;
+  margin-right: 6px;
 }
 
 .container .linkage .linktypo1 {
@@ -215,6 +234,7 @@
   color: green;
   font-weight: bold;
   font-family: Poppins;
+
 }
 
 .container .linkage .linktypo2 {
@@ -237,28 +257,107 @@
   border: 0.5px solid #D9D9D9;
   border-radius: 10px;
   opacity: 1;
-
   justify-content: space-around;
+
 }
 
-.container .yourinfo .infotypo1 {
+.container .yourinfo .wallet{
+  display: flex;
+  flex-direction: column;
+  margin-top: 18px;
+  margin-left: 8%;
+  margin-right: 7%;
+  font-family: Poppins;
+}
+
+.container .yourinfo .wallet:active{
+  display: flex;
+  flex-direction: column;
+  font-family: Poppins;
+  background-color: #FCD16D;
+}
+
+.container .yourinfo .wallet .wallettypo1 {
   display: flex;
   justify-content: space-between;
   font-weight: bold;
   font-size: 16px;
-  margin-top: 18px;
-  margin-left: 30px;
-  margin-right: 22px;
-  font-family: Poppins;
-
 }
 
-.container .yourinfo .infotypo2{
+.container .yourinfo .wallet .wallettypo2{
+  color: #DADADA;
+  font-size: 14px;
+}
 
-  margin-left: 30px;
-  color: gray;
-  font-size: 12px;
+.container .yourinfo .wallet .walletscore{
+  color: #DADADA;
+  font-size: 14px;
+}
+
+.container .yourinfo .account{
+  display: flex;
+  flex-direction: column;
+  margin-top: 18px;
+  margin-left: 8%;
+  margin-right: 7%;
   font-family: Poppins;
+}
+
+.container .yourinfo .account:active{
+  display: flex;
+  flex-direction: column;
+  font-family: Poppins;
+  background-color: #FCD16D;
+}
+
+.container .yourinfo .account .accounttypo1 {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.container .yourinfo .account .accounttypo2{
+  color: #DADADA;
+  font-size: 14px;
+}
+
+.container .yourinfo .account .accountscore{
+  color: #DADADA;
+  font-size: 14px;
+}
+
+.container .yourinfo .card{
+  display: flex;
+  flex-direction: column;
+  margin-top: 18px;
+  margin-left: 8%;
+  margin-right: 7%;
+  font-family: Poppins;
+}
+
+.container .yourinfo .card:active{
+  display: flex;
+  flex-direction: column;
+  font-family: Poppins;
+  background-color: #FCD16D;
+}
+
+.container .yourinfo .card .cardtypo1 {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.container .yourinfo .card .cardtypo2{
+  color: #DADADA;
+  font-size: 14px;
+}
+
+.container .yourinfo .card .cardscore{
+  color: #DADADA;
+  font-size: 14px;
 }
 
 .container .addpay{
@@ -277,10 +376,26 @@
   opacity: 1;
 }
 
+.container .addpay:active{
+  display: flex;
+  position: absolute;
+  top: 546px;
+  left: 6%;
+  right: 6%;
+  height: 60px;
+  margin: 0;
+
+  background: #FCD16D 0% 0% no-repeat padding-box;
+  box-shadow: 2px 5px 5px #0000000D;
+  border: 0.5px solid;
+  border-radius: 10px;
+  opacity: 1;
+}
+
 .container .addpay .addpayimg{
   margin-top: 14px;
   margin-bottom: 14px;
-  margin-left: 77px;
+  margin-left: 21%;
 }
 
 .container .addpay .addpaytypo{
@@ -298,7 +413,7 @@
   left: 6%;
   right: 6%;
   height: 117px;
-  margin: 0;
+  margin: auto;
 
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 2px 5px 5px #0000000D;
@@ -308,10 +423,51 @@
   align-items: center
 }
 
+.container .event:active {
+  display: flex;
+  position: absolute;
+  top: 616px;
+  left: 6%;
+  right: 6%;
+  height: 117px;
+  margin: auto;
+
+  background: #FCD16D 0% 0% no-repeat padding-box;
+  box-shadow: 2px 5px 5px #0000000D;
+  border: 0.5px solid;
+  border-radius: 10px;
+  opacity: 1;
+  align-items: center
+}
+
 .container .event .eventimg {
   float: left;
   margin-top: 20.3px;
-  margin-left: 11px;
+  margin-left: 3%;
   margin-bottom: 18.7px;
-  
+
+}
+
+.container .event .eventtypo1 {
+  font-size: 12px;
+  color: orange;
+  font-family: Poppins;
+}
+
+.container .event .eventtypo2{
+  font-size: 14px;
+  font-family: Poppins;
+}
+
+.container .fixmenu {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 0.5px solid #D9D9D9;
+  opacity: 1;
+  justify-content: space-around;
 }
