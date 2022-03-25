@@ -34,18 +34,6 @@ const GoHome = () => {
         console.log("이벤트 가기");
     }
 
-    const onClickHouse = () => {
-        console.log("홈 버튼");
-    }
-
-    const onClickQr = () => {
-        console.log("큐알 코드");
-    }
-
-    const onClickMenu = () => {
-        console.log("메뉴 버튼");
-    }
-
 
     return(
         <div>
@@ -107,12 +95,6 @@ const GoHome = () => {
                     </label>
 
                 </div>
-                <div className="fixmenu">
-                    <img scr={houseGo} className="houseicon" alt="house" onClick={onClickHouse} />
-                    <img scr={qrGo} className="qricon" alt="qrcode" onClick={onClickQr} />
-                    <img scr={menuGo} className="menuicon" alt="etcicon" onClick={onClickMenu} />
-                </div>
-                
             </div>
         </div>
     )
