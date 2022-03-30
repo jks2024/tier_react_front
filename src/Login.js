@@ -5,6 +5,7 @@ import imgLogo from './images/tier_logo.png'
 import imgBottom from './images/nedbank_s.png'
 import FrontApi from './api/frontApi';
 import useStore from './zustand/UserInfo';
+import EnnovaApi from './api/ennovaApi';
 
 const Login = () => {
     // 키보드 입력
@@ -50,7 +51,8 @@ const Login = () => {
         }
     }
     const onChangePw = (e) => {
-        const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/
+        //const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/
+        const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[0-9]).{8,25}$/
         const passwordCurrent = e.target.value ;
         setInputPw(passwordCurrent)
         if (!passwordRegex.test(passwordCurrent)) {
@@ -61,8 +63,17 @@ const Login = () => {
             setIsPw(true);
         }        
     }
-    const onClickLogin = () => {
+    const onClickLogin = async() => {
         console.log("클릭  로그인");
+        let result = await EnnovaApi.postUserLogin(inputId, inputPw);
+        //let result = await FrontApi.getTest();
+        console.log(result.data);
+        if (result.data.Code == "00") {
+            console.log("정상적으로 로그인 되었습니다. 메인으로 이동 합니다.")
+        } else {
+            console.log("아이디 및 패스워드를 재 확인해 주세요.")
+        }
+
     }
 
     return (

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const publicAxiosConfig = {
-    baseURL:'https://test-front-api.leo12.com',
+    baseURL:'http://dev-front-api.leo12.com',
     timeout: 30000,
     headers: {
         "Content-type": "application/json; charset=UTF-8",
@@ -24,6 +24,10 @@ const FrontApi = {
     getFaqList: async function (skipIdx, cnt, faqType, searchTxt, isMore) {
         let url = "/open/faq/list?&skipIdx=" + skipIdx + "&cnt=" + cnt + "&faqType=" + faqType + '&searchText=' + searchTxt;
         let response = await publicFrontAxios.get(url);
+        return response.data;
+    },
+    getTest: async function() {
+        let response = await publicFrontAxios.get("");
         return response.data;
     }
 }
