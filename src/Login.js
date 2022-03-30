@@ -70,10 +70,11 @@ const Login = () => {
         console.log(result.data);
         if (result.data.Code == "00") {
             console.log("정상적으로 로그인 되었습니다. 메인으로 이동 합니다.")
+            window.location.replace("/home");
+
         } else {
             console.log("아이디 및 패스워드를 재 확인해 주세요.")
         }
-
     }
 
     return (
