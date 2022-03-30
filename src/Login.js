@@ -6,6 +6,7 @@ import imgBottom from './images/nedbank_s.png'
 import FrontApi from './api/frontApi';
 import useStore from './zustand/UserInfo';
 import EnnovaApi from './api/ennovaApi';
+import Modal from './modal.js';
 
 const Login = () => {
     // 키보드 입력
@@ -26,6 +27,15 @@ const Login = () => {
     // Test
     const [test, setTest] = useState(0);
     const isCount = useStore((state) => state.count)  // Zustand Test
+
+    // 팝업
+    const [modalOpen, setModalOpen] = useState(false);
+    const openModal = () => {
+        setModalOpen(true);
+    };
+    const closeModal = () => {
+        setModalOpen(false);
+    };
 
     useEffect(() => {
         const getData = async () => {
@@ -73,7 +83,8 @@ const Login = () => {
             window.location.replace("/home");
 
         } else {
-            console.log("아이디 및 패스워드를 재 확인해 주세요.")
+            console.log("아이디 및 패스워드를 재확인해 주세요.")
+            setModalOpen(true);
         }
     }
 
@@ -108,8 +119,11 @@ const Login = () => {
                 </div>
                 <div className="item2">
                     {(isId && isPw) ? 
-                    <button className="enable_button" onClick={onClickLogin}>SING IN</button> :
-                    <button className="disable_button" onClick={onClickLogin}>SING IN</button>}
+                    <button className="enable_button"
+                    onClick={onClickLogin}>SING IN</button>  :
+                    <button className="disable_button"
+                    onClick={onClickLogin}>SING IN</button>}
+                    <Modal open={modalOpen} close={closeModal} header="오류" main="아이디 및 패스워드를 재확인해 주세요."></Modal>
                 </div>
                 <div className="signup">
                     <Link to="/Signup" className="link_style">
