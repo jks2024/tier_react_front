@@ -123,7 +123,7 @@ const Login = () => {
                     onClick={onClickLogin}>SING IN</button>  :
                     <button className="disable_button"
                     onClick={onClickLogin}>SING IN</button>}
-                    <Modal open={modalOpen} close={closeModal} header="오류" main="아이디 및 패스워드를 재확인해 주세요."></Modal>
+                    <Modal open={modalOpen} close={closeModal} header="오류">아이디 및 패스워드를 재확인해 주세요.</Modal>
                 </div>
                 <div className="signup">
                     <Link to="/Signup" className="link_style">
