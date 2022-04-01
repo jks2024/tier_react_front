@@ -2,36 +2,37 @@ import React, {useState, useEffect} from 'react';
 import alarmGo from './images/bell.png'
 import menuGo from './images/etc_button.png'
 import houseGo from './images/home_button.png'
-import moreAdd from './images/more_see.png'
-import threeCoin from './images/p_coin.png'
+import receiptGo from './images/receipt.png'
+import nowGo from './images/short_cut.png'
 import qrGo from './images/qr_button.png'
 import logoWhite from './images/tier_logo_white.png'
-import imgBig from './images/n_logo.png'
+import imgPhone from './images/ned_phone.png'
+import qrPay from './images/qr_button_black.png'
 
 const GoHome = () => {
     
-    const onClickLinkage = () => {
-        console.log("계좌 링크");
-    }
-
     const onClickWallet = () => {
-        console.log("지갑 연동");
+        console.log("지갑 추가");
     }
 
-    const onClickAccount = () => {
-        console.log("계좌 연동");
+    const onClickEFT = () => {
+        console.log("EFT로 이동");
     }
 
-    const onClickCard = () => {
-        console.log("카드 연동");
+    const onClickATM = () => {
+        console.log("ATM으로 이동");
     }
 
-    const onClickAdd = () => {
-        console.log("결제 수단 추가");
+    const onClickPeer = () => {
+        console.log("Peer로 이동");
     }
 
-    const onClickEvent = () => {
-        console.log("이벤트 가기");
+    const onClickQRpay = () => {
+        console.log("QRpay로 이동");
+    }
+
+    const onClickHistory = () => {
+        console.log("History로 이동");
     }
 
 
@@ -46,54 +47,32 @@ const GoHome = () => {
                         <img src={alarmGo} alt="alarm" />
                     </div>
                 </div>
-                <div className="linkage" onClick={onClickLinkage}>
-                    <img src={imgBig} className="nedlogo" alt="bigN" />
-                    <label>
-                        <span className="linktypo1">Wallet in my hand</span><br/>
-                        <span className="linktypo2">Link to Nedbank account and make payments easier</span>
-                    </label>
+                <div className="linkwallet" onClick={onClickWallet}>
+                    <img src={imgPhone} className="nedlogo" alt="bigN" />
+                        <span className="linkwallet1">There is no wallet connected.</span>
+                        <span className="linkwallet2">+ Add Wallet</span>
                 </div>
-                <div className="yourinfo">
-
-                    <div className="wallet" onClick={onClickWallet}>
-                        <label className="wallettypo1">
-                            <label><span>WALLET</span>&nbsp;&nbsp;<span className="walletscore">0</span></label>
-                            <span>R 0.00</span>
-                        </label>
-                        <br/>
-                        <span className="wallettypo2">No Wallet registered</span>
-                    </div>
-
-                    <div className="account" onClick={onClickAccount}>
-                        <label className="accounttypo1">
-                            <label><span>ACCOUNT</span>&nbsp;&nbsp;<span className="accountscore">0</span></label>
-                            <span>R 0.00</span>
-                        </label>
-                        <br/>
-                        <span className="accounttypo2">No Account registered</span>
-                    </div>
-
-                    <div className="card" onClick={onClickCard}>
-                        <label className="cardtypo1">
-                            <label><span>CARD</span>&nbsp;&nbsp;<span className="cardscore">0</span></label>
-                            <span>R 0.00</span>
-                        </label>
-                        <br/>
-                        <span className="cardtypo2">No card registered</span>
-                    </div>
-
-                </div>    
-                <div className="addpay" onClick={onClickAdd}>
-                    <img src={moreAdd} className="addpayimg" alt="plus"/>
-                    <span className="addpaytypo">Add payment method</span>
+                <div className="EFT" onClick={onClickEFT}>
+                    <img src={nowGo} className="imgEFT" alt="GoEFT" />
+                    <span className="EFTtypo">EFT</span>
                 </div>
-                <div className="event" onClick={onClickEvent}>
-                    <img src={threeCoin} className="eventimg" alt="coins"/>
-                    <label>
-                    <span className="eventtypo1">EVENT</span>
-                    <br/><span className="eventtypo2">Check attendance and get free points! The accumulated points can be used like cash.</span>
-                    </label>
-
+                <div className="ATM" onClick={onClickATM}>
+                    <img src={receiptGo} className="imgATM" alt="GoATM" />
+                    <span className="ATMtypo">ATM</span>
+                </div>
+                <div className="Peer" onClick={onClickPeer}>
+                    <img src={nowGo} className="imgPeer" alt="GoPeer" />
+                    <span className="Peertypo">PEER RO PEER</span>
+                </div>
+                <div className="QR" onClick={onClickQRpay}>
+                    <img src={qrPay} className="imgQrblack" alt="GoQrpay" />
+                    <span className="QRtypo">QR PAYMENT</span>
+                </div>
+                <div className="history" >
+                    <span className="historytypo1">HISTORY</span>
+                    <div className="historyinfo" onClick={onClickHistory}>
+                        <span className="historyinfotypo">No history</span>
+                    </div>
                 </div>
             </div>
         </div>
