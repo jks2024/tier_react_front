@@ -1,26 +1,30 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState } from 'react';
 import imgArrow from './images/left_b.png'
 import { Link } from "react-router-dom";
+import EnnovaApi from './api/ennovaApi';
+import Modal from './modal.js';
 
-const Signup = () =>{
+const SignupS1 = () =>{
     // 키보드 입력
     const [inputId, setInputId] = useState("");
     const [inputPw, setInputPw] = useState("");
     const [inputConPw, setInputConPw] = useState("");
-    const [inputFirstName, setInputFirstName] = useState("");
-    const [inputLastName, setInputLastName] = useState("");
-    const [inputPhone, setInputPhone] = useState("");
 
     // 오류 메시지
     const [idMessage, setIdMessage] = useState("");
     const [pwMessage, setPwMessage] = useState("");
     const [conPwMessage, setConPwMessage] = useState("");
-    const [phoneMessage, setPhoneMessage] = useState("");
 
     // 유효성 검사
     const [isId, setIsId] = useState("");
     const [isPw, setIsPw] = useState("");
     const [isConPw, setIsConPw] = useState("");
+    // 팝업
+    const [modalOpen, setModalOpen] = useState(false);
+
+    const closeModal = () => {
+        setModalOpen(false);
+    };
 
     const onChangId = (e) => {
         setInputId(e.target.value)
@@ -57,23 +61,16 @@ const Signup = () =>{
             setIsConPw(true);
         }      
     }
-
-    const onChangeFirstName = (e) => {
-        setInputFirstName(e.target.value);
-    }
-
-    const onChangeLastName = (e) => {
-        setInputLastName(e.target.value);
-    } 
-
-    const onChangePhone = (e) => {
-        const regex = /^[0-9\b -]{0,13}$/;
-        if (regex.test(e.target.value)) {
-            setInputPhone(e.target.value);
-        }
-    }
-    const onClickLogin = () => {
+    const onClickLogin = async() => {
         console.log("Click 회원가입");
+        let result = await EnnovaApi.postUserInfoCheckId(inputId);
+        if (result.data.Code == "00") {
+            console.log("가입된 아이디가 없습니다. 다음 단계 진행 합니다.")
+            window.location.replace("/SignupS2");
+        } else {
+            console.log("아이디 및 패스워드를 재확인해 주세요.")
+            setModalOpen(true);
+        } 
     }
 
     return(
@@ -108,22 +105,14 @@ const Signup = () =>{
             </div>
 
             <div className="item2">
-                <input className="input" placeholder="성" value ={inputFirstName} onChange={onChangeFirstName}/>
-            </div>
-            <div className="item2">
-                <input className="input" placeholder="이름" value ={inputLastName} onChange={onChangeLastName}/>
-            </div>
-            <div className="item2">
-                <input className="input" placeholder="전화번호" value ={inputPhone} onChange={onChangePhone}/> 
-            </div>
-            <div className="item2">
                 {(isId && isPw && isConPw) ? 
                 <button className="enable_button" onClick={onClickLogin}>NEXT</button> :
                 <button className="disable_button" onClick={onClickLogin}>NEXT</button>}
+                <Modal open={modalOpen} close={closeModal} header="오류">중복된 아이디 입니다.</Modal>
             </div>
         </div>
     </div>
     )
 };
 
-export default Signup;
+export default SignupS1;
