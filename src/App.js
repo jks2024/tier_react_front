@@ -4,6 +4,7 @@ import SignupS1 from './SignupS1'
 import SignupS2 from './SignupS2'
 import FindId from './FindId'
 import GoHome from './Home'
+import CraeteWallet from './CreateWallet';
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
         <Route path="/SignupS2" element={<SignupS2 />} />
         <Route path="/FindId" element={<FindId />} />
         <Route path="/Home" element={<GoHome />} />
-        </Routes>
+        <Route path='/CreateWallet' element={<CraeteWallet />} />
+      </Routes>
     </Router>
   );
 }

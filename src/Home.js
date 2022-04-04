@@ -8,11 +8,13 @@ import qrGo from './images/qr_button.png'
 import logoWhite from './images/tier_logo_white.png'
 import imgPhone from './images/ned_phone.png'
 import qrPay from './images/qr_button_black.png'
+import { Link } from "react-router-dom";
 
 const GoHome = () => {
     
     const onClickWallet = () => {
         console.log("지갑 추가");
+        window.location.replace("/CreateWallet");
     }
 
     const onClickEFT = () => {
@@ -69,7 +71,7 @@ const GoHome = () => {
                     <span className="QRtypo">QR PAYMENT</span>
                 </div>
                 <div className="history" >
-                    <span className="historytypo1">HISTORY</span>
+                    <span className="historytypo">HISTORY</span>
                     <div className="historyinfo" onClick={onClickHistory}>
                         <span className="historyinfotypo">No history</span>
                     </div>

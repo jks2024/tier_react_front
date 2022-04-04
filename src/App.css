@@ -167,7 +167,6 @@
 
 /*홈 화면 css*/
 
-
 .container .mainhead {
   background-color: #F9AA06;
   display: flex;
@@ -440,7 +439,7 @@
   flex-direction: column;
 }
 
-.container .history .historytypo1{
+.container .history .historytypo{
   margin-top: 24px;
   margin-left: 24px;
   font-size: 18px;
@@ -487,4 +486,117 @@
   color: #AEAEAE;
   font-size: 16px;
   font-family: Poppins;
+}
+
+/*CreateWallet 화면*/
+
+
+
+.container .createmain{
+  display: flex;
+  height: 84px;
+  align-items: center;
+
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-bottom: 0.5px solid #D9D9D9;
+  opacity: 1;
+}
+
+.container .createmain .backhome {
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 26px;
+  display: flex;
+  justify-content:left;
+}
+
+.container .createmain .createmaintypo {
+  margin-top: 32px;
+  margin-left: 76px;
+  margin-bottom: 27px;
+  font-weight: bold;
+  font-family: poppins;
+}
+
+.container .income {
+  margin-left: 20px;
+  margin-top: 26px;
+  margin-right: 20px;
+}
+
+.container .income .incometypo {
+  font-family: poppins;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.container .income .incomeselect {
+  margin-top: 4px;
+  margin-bottom: 26px;
+  height: 56px;
+  width: 100%;
+  color: #AEAEAE;
+  border: 0.5px solid #E2E2E2;
+  border-radius: 10px;
+}
+
+.container .industry {
+  margin-left: 20px;
+  margin-top: 26px;
+  margin-right: 20px;
+}
+
+.container .industry .industrytypo {
+  font-family: poppins;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.container .industry .industryselect {
+  margin-top: 4px;
+  margin-bottom: 26px;
+  height: 56px;
+  width: 100%;
+  color: #AEAEAE;
+  border: 0.5px solid #E2E2E2;
+  border-radius: 10px;
+}
+
+.container .occupation {
+  margin-left: 20px;
+  margin-top: 26px;
+  margin-right: 20px;
+}
+
+.container .occupation .occupationtypo {
+  font-family: poppins;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.container .occupation .occupationselect {
+  margin-top: 4px;
+  margin-bottom: 26px;
+  height: 56px;
+  width: 100%;
+  color: #AEAEAE;
+  border: 0.5px solid #E2E2E2;
+  border-radius: 10px;
+}
+
+.container .createbutton {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.container .createbutton .forbidbutton{
+  width: 100%;
+  height: 60px;
+  background: #D9D9D9 0% 0% no-repeat padding-box;
+  border: 0.5px solid #E2E2E2;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: poppins;
+  color: #ffffff;
 }
