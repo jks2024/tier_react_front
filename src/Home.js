@@ -1,20 +1,26 @@
 import React, {useState, useEffect} from 'react';
 import alarmGo from './images/bell.png'
-import menuGo from './images/etc_button.png'
-import houseGo from './images/home_button.png'
 import receiptGo from './images/receipt.png'
 import nowGo from './images/short_cut.png'
-import qrGo from './images/qr_button.png'
 import logoWhite from './images/tier_logo_white.png'
 import imgPhone from './images/ned_phone.png'
 import qrPay from './images/qr_button_black.png'
 import { Link } from "react-router-dom";
+import NedBankApi from './api/nedBankApi';
 
 const GoHome = () => {
     
-    const onClickWallet = () => {
+    const onClickWallet = async() => {
         console.log("지갑 추가");
-        window.location.replace("/CreateWallet");
+        //window.location.replace("/CreateWallet");
+        let result = await NedBankApi.accoutAuth("test");
+        console.log(result.data.Redirect_Url);
+        console.log(result.data.Result[0].Code);
+        if (result.data.Result[0].Code == "00") {
+            window.location.href= result.data.Redirect_Url;
+        } else {
+            
+        }
     }
 
     const onClickEFT = () => {
