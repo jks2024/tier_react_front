@@ -63,7 +63,7 @@ const SignupS1 = () =>{
     }
     const onClickLogin = async() => {
         console.log("Click 회원가입");
-        let result = await EnnovaApi.postUserInfoCheckId(inputId);
+        let result = await EnnovaApi.userInfoCheckId(inputId);
         if (result.data.Code == "00") {
             console.log("가입된 아이디가 없습니다. 다음 단계 진행 합니다.")
             window.location.replace("/SignupS2");

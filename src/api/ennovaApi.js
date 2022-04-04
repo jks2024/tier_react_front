@@ -1,23 +1,11 @@
 import axios from "axios";
 axios.defaults.withCredentials = true;
-const ENNOVA_DOMAIN = "https://adminsa.ennovalabs.com/rest"
-const CONTENT_TYPE = "application/json; charset=UTF-8"
+const ENNOVA_DOMAIN = "https://adminsa.ennovalabs.com/rest";
+const HEADER = {"Content-type": "application/json; charset=UTF-8"};
 
-const ennovaApiConfig = {
-    baseURL : ENNOVA_DOMAIN,
-    headers: {
-        "Content-type": CONTENT_TYPE
-    }
-}
-
-let ennovaApiAxios;
-ennovaApiAxios = axios.create(ennovaApiConfig);
-
-const EnnovaApi = {
-	postUserLogin: async function(id, pw) {
-		let headersList = {
-			"Content-type": CONTENT_TYPE
-		}
+// 로그인
+const EnnovaApi = {	
+	userLogin: async function(id, pw) {
 		let bodyContent = {
 			"Query": {
 				"UserInfo": {
@@ -32,20 +20,12 @@ const EnnovaApi = {
 				}
 			}
 		}
-        
-		let reqOptions = {
-			url: ENNOVA_DOMAIN,
-			method: "POST",
-			headers: headersList,
-			data: bodyContent,
-		}
+		let reqOptions = {url: ENNOVA_DOMAIN, method: "POST", headers:HEADER, data: bodyContent,}
     	return await axios.request(reqOptions)
 	},
 
-  	postUserInfoCheckId: async function(id) {
-		let headersList = {
-			"Content-type": CONTENT_TYPE
-		}
+	// 가입된 회원인지 확인
+  	userInfoCheckId: async function(id) {
 		let bodyContent = {
 			"Query": {
 				"UserInfo": {
@@ -59,14 +39,71 @@ const EnnovaApi = {
 				}
 			}
 		}
-		let reqOptions = {
-			url: ENNOVA_DOMAIN,
-			method: "POST",
-			headers: headersList,
-			data: bodyContent,
+		let reqOptions = {url: ENNOVA_DOMAIN, method: "POST", headers:HEADER, data: bodyContent,}
+    	return await axios.request(reqOptions)
+  	},
+	// 가입된 Phone인지 확인
+	userInfoCheckPhone: async function(id, phone) {
+		let bodyContent = {
+			"Query": {
+				"UserInfo": {
+				"id": id
+				},
+				"ApiInfo": {
+					"ApiName": "api_s_user_info_check_phone",
+					"Params": {
+						"ID": phone
+					}
+				}
+			}
 		}
-		return await axios.request(reqOptions)
-  	}
+		let reqOptions = {url: ENNOVA_DOMAIN, method: "POST", headers:HEADER, data: bodyContent,}
+    	return await axios.request(reqOptions)
+	},
+	// 가입 정보 추가
+	joinUserInfoInsert: async function(id, pw, phone, fName, lName) {
+		let BODY = {
+			"Query": {
+				"UserInfo": {
+				"id": id
+				},
+				"ApiInfo": {
+					"ApiName": "api_i_user_info",
+					"Params": {
+						"ID": id,
+						"PhoneNumber": phone,
+						"Pass": pw,
+						"UserType": 0,
+						"FirstName": fName,
+						"LastName": lName,
+						"RecommendUserID": "",
+						"EmailID": ""
+					}
+				}
+			}
+		}
+		let reqOptions = {url: ENNOVA_DOMAIN, method: "POST", headers:HEADER, data: BODY,}
+    	return await axios.request(reqOptions)
+	},
+	// 회원 정보 삭제
+	delUserInfo: async function(id) {
+		let BODY = {
+			"Query": {
+				"UserInfo": {
+				"id": id
+				},
+				"ApiInfo": {
+					"ApiName": "api_d_user_info",
+					"Params": {
+						"ID": id,
+						"Type": 0
+					}
+				}
+			}
+		}
+		let reqOptions = {url: ENNOVA_DOMAIN, method: "POST", headers:HEADER, data: BODY,}
+    	return await axios.request(reqOptions)
+	}
 }
 
 export default EnnovaApi;

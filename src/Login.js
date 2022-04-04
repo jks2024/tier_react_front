@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import './App.css';
 import imgLogo from './images/tier_logo.png'
 import imgBottom from './images/nedbank_s.png'
-import FrontApi from './api/frontApi';
 import useStore from './zustand/UserInfo';
 import EnnovaApi from './api/ennovaApi';
 import Modal from './modal.js';
@@ -38,11 +37,6 @@ const Login = () => {
     };
 
     useEffect(() => {
-        const getData = async () => {
-            let result = await FrontApi.getNotice(1, "en", 0);
-            setTest(result.data.list[0]);    
-        }
-        getData()
     });
 
     const autoSign = () => {
@@ -75,7 +69,7 @@ const Login = () => {
     }
     const onClickLogin = async() => {
         console.log("클릭  로그인");
-        let result = await EnnovaApi.postUserLogin(inputId, inputPw);
+        let result = await EnnovaApi.userLogin(inputId, inputPw);
         //let result = await FrontApi.getTest();
         console.log(result.data);
         if (result.data.Code == "00") {

@@ -27,7 +27,8 @@ const Signup = () =>{
         }
     }
     const onClickLogin = () => {
-        console.log("Click 회원가입");
+        console.log("SMS 인증 하기");
+        
     }
 
     return(
