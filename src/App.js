@@ -5,6 +5,7 @@ import SignupS2 from './SignupS2'
 import FindId from './FindId'
 import GoHome from './Home'
 import CraeteWallet from './CreateWallet';
+import Fullmenu from './Fullmenu'
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/FindId" element={<FindId />} />
         <Route path="/Home" element={<GoHome />} />
         <Route path='/CreateWallet' element={<CraeteWallet />} />
+        <Route path='/Fullmenu' element={<Fullmenu />} />
       </Routes>
     </Router>
   );
