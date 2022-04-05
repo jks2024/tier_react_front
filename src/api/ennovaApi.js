@@ -103,6 +103,25 @@ const EnnovaApi = {
 		}
 		let reqOptions = {url: ENNOVA_DOMAIN, method: "POST", headers:HEADER, data: BODY,}
     	return await axios.request(reqOptions)
+	},
+
+	// 회원 정보 조회
+	userInfoGet: async function(id) {
+		let BODY = {
+			"Query": {
+				"UserInfo": {
+				"id": id
+				},
+				"ApiInfo": {
+					"ApiName": "api_s_user_info",
+					"Params": {
+						"ID": id
+					}
+				}
+			}
+		}
+		let reqOptions = {url: ENNOVA_DOMAIN, method: "POST", headers:HEADER, data: BODY,}
+    	return await axios.request(reqOptions)
 	}
 }
 

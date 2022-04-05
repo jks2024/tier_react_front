@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext } from 'react';
 import { Link } from "react-router-dom";
 import './App.css';
 import imgLogo from './images/tier_logo.png'
@@ -6,8 +6,10 @@ import imgBottom from './images/nedbank_s.png'
 import useStore from './zustand/UserInfo';
 import EnnovaApi from './api/ennovaApi';
 import Modal from './modal.js';
+import { UserContext } from "./context/UserInfo"
 
 const Login = () => {
+    const context = useContext(UserContext);
     // 키보드 입력
     const [inputId, setInputId] = useState("");
     const [inputPw, setInputPw] = useState("");
@@ -74,6 +76,8 @@ const Login = () => {
         console.log(result.data);
         if (result.data.Code == "00") {
             console.log("정상적으로 로그인 되었습니다. 메인으로 이동 합니다.")
+            context.id = inputId;
+            context.passwd = inputPw;
             window.location.replace("/home");
 
         } else {
@@ -124,7 +128,7 @@ const Login = () => {
                         <span>Sign Up</span>
                     </Link>
                 </div>
-                <p>Count : {isCount}</p>
+                {/* <p>Count : {isCount}</p> */}
                 <div className="bdlogo">
                     <img src={imgBottom} alt="NedBank" />
                 </div>    
