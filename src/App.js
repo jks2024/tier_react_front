@@ -6,6 +6,7 @@ import FindId from './FindId'
 import GoHome from './Home'
 import CraeteWallet from './CreateWallet';
 import Fullmenu from './Fullmenu'
+import MyInfo from './MyInfo'
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import UserStore from './context/UserInfo'
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/Home" element={<GoHome />} />
           <Route path='/CreateWallet' element={<CraeteWallet />} />
           <Route path='/Fullmenu' element={<Fullmenu />} />
+          <Route path='/MyInfo' element={<MyInfo />} />
         </Routes>
       </Router>
     </UserStore>

@@ -38,7 +38,7 @@
 }
 .container .stay{
   position: relative;
-  top: -10px;
+  top: -8px;
 }
 
 .container .sign {
@@ -689,4 +689,124 @@ flex-direction: column;
 .container .fullmyinfo .myinfolist .infobox3 {
   border-top: 0.5px solid #D9D9D9;
 
+}
+
+/*My Information 페이지*/
+
+.container .myinfohead{
+  display: flex;
+  height: 84px;
+  align-items: center;
+  
+
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-bottom: 0.5px solid #D9D9D9;
+  opacity: 1;
+}
+
+.container .myinfohead .backmenu {
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 26px;
+
+ 
+}
+
+.container .myinfohead .myinfotypo {
+  margin-left: 25%;
+  margin-right: 20%;
+  font-weight: bold;
+  font-family: poppins;
+}
+
+.container .myinfoId {
+  display: flex;
+  margin-left: 20px;
+  margin-top: 21px;
+  margin-right: 20px;
+  height: 56px;
+
+  align-items: center;
+
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 0.5px solid #E2E2E2;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.container .myinfoId .infoIdtypo1 {
+  margin-left: 18px;
+}
+
+.container .myinfoId .infoIdtypo2 {
+  margin-left: 89px;
+}
+
+.container .myinfofirstname {
+  display: flex;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-right: 20px;
+  height: 56px;
+
+  align-items: center;
+
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 0.5px solid #E2E2E2;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.container .myinfofirstname .myinfofirstname1 {
+  margin-left: 18px;
+}
+
+.container .myinfofirstname .myinfofirstname2 {
+  margin-left: 30px;
+}
+
+.container .myinfolastname {
+  display: flex;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-right: 20px;
+  height: 56px;
+
+  align-items: center;
+
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 0.5px solid #E2E2E2;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.container .myinfolastname .myinfolastname1 {
+  margin-left: 18px;
+}
+
+.container .myinfolastname .myinfolastname2 {
+  margin-left: 30px;
+}
+
+.container .myinfophone {
+  display: flex;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-right: 20px;
+  height: 56px;
+
+  align-items: center;
+
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 0.5px solid #E2E2E2;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.container .myinfophone .myinfophone1 {
+  margin-left: 18px;
+}
+
+.container .myinfophone .myinfophone2 {
+  margin-left: 98px;
 }
