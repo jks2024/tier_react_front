@@ -1,8 +1,21 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import imgArrow from './images/left_s.png'
-import { Link } from "react-router-dom";
+import { UserContext } from "./context/UserInfo"
+import EnnovaApi from './api/ennovaApi';
 
 const Myinfo = () => {
+    const [getId, setGetId] = useState("");
+    const context = useContext(UserContext);
+    
+    useEffect(() => {
+        console.log("ID : " + context.id);
+        setGetId(context.id);
+        const getData = async() => {
+            let result = await EnnovaApi.userInfoGet("jks2024");
+            console.log(result.data);
+        }
+        getData()
+    });
 
 
     return(

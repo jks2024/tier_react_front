@@ -78,6 +78,7 @@ const Login = () => {
             console.log("정상적으로 로그인 되었습니다. 메인으로 이동 합니다.")
             context.id = inputId;
             context.passwd = inputPw;
+            console.log(context.id);
             window.location.replace("/home");
 
         } else {
