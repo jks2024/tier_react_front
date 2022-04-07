@@ -6,10 +6,8 @@ import imgBottom from './images/nedbank_s.png'
 import useStore from './zustand/UserInfo';
 import EnnovaApi from './api/ennovaApi';
 import Modal from './modal.js';
-import { UserContext } from "./context/UserInfo"
 
 const Login = () => {
-    const context = useContext(UserContext);
     // 키보드 입력
     const [inputId, setInputId] = useState("");
     const [inputPw, setInputPw] = useState("");
@@ -70,15 +68,12 @@ const Login = () => {
         }        
     }
     const onClickLogin = async() => {
-        console.log("클릭  로그인");
         let result = await EnnovaApi.userLogin(inputId, inputPw);
-        //let result = await FrontApi.getTest();
         console.log(result.data);
         if (result.data.Code == "00") {
             console.log("정상적으로 로그인 되었습니다. 메인으로 이동 합니다.")
-            context.id = inputId;
-            context.passwd = inputPw;
-            console.log(context.id);
+            window.localStorage.setItem("userId", inputId);
+            window.localStorage.setItem("userPw", inputPw);
             window.location.replace("/home");
 
         } else {
@@ -129,7 +124,7 @@ const Login = () => {
                         <span>Sign Up</span>
                     </Link>
                 </div>
-                {/* <p>Count : {isCount}</p> */}
+                <p>Count : {isCount}</p>
                 <div className="bdlogo">
                     <img src={imgBottom} alt="NedBank" />
                 </div>    

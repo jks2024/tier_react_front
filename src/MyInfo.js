@@ -1,25 +1,19 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useEffect } from 'react';
 import imgArrow from './images/left_s.png'
-import { UserContext } from "./context/UserInfo"
 import EnnovaApi from './api/ennovaApi';
 
 const Myinfo = () => {
-    const [getId, setGetId] = useState("");
-    const context = useContext(UserContext);
+    const getId = window.localStorage.getItem("userId");
     
     useEffect(() => {
-        console.log("ID : " + context.id);
-        setGetId(context.id);
         const getData = async() => {
-            let result = await EnnovaApi.userInfoGet("jks2024");
+            let result = await EnnovaApi.userInfoGet(getId);
             console.log(result.data);
         }
         getData()
     });
 
-
     return(
-    
         <div className="container">
             <div className="myinfohead">
                 <img src={imgArrow} alt="back" className="backmenu" />
