@@ -1,14 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import imgArrow from './images/left_s.png'
 import EnnovaApi from './api/ennovaApi';
 
 const Myinfo = () => {
-    const getId = window.localStorage.getItem("userId");
+    const localId = window.localStorage.getItem("userId");
+    const [id, setId] = useState("");
+    const [phone, setPhone] = useState("");
+    const [first, setFirst] = useState("");
+    const [last, setLast] = useState("");
     
     useEffect(() => {
         const getData = async() => {
-            let result = await EnnovaApi.userInfoGet(getId);
-            console.log(result.data);
+            let result = await EnnovaApi.userInfoGet(localId);
+            if (result.data.Code == "00") {
+                setId(result.data.Body.Result[0].ID);
+                setPhone(result.data.Body.Result[0].PhoneNumber);
+                setFirst(result.data.Body.Result[0].FirstName);
+                setLast(result.data.Body.Result[0].LastName);
+            }
         }
         getData()
     });
@@ -21,19 +30,19 @@ const Myinfo = () => {
             </div>
             <div className="myinfoId">
                 <span className="infoIdtypo1">ID</span>
-                <span className="infoIdtypo2">tieradmin</span>
+                <span className="infoIdtypo2">{id}</span>
             </div>
             <div className="myinfofirstname">
                 <span className="myinfofirstname1">First Name</span>
-                <span className="myinfofirstname2">JINAH</span>
+                <span className="myinfofirstname2">{first}</span>
             </div>
             <div className="myinfolastname">
                 <span className="myinfolastname1">Last Name</span>
-                <span className="myinfolastname2">CHAE</span>
+                <span className="myinfolastname2">{last}</span>
             </div>
             <div className="myinfophone">
                 <span className="myinfophone1">Phone<br/>Number</span>
-                <span className="myinfophone2">10-1234-1234</span>
+                <span className="myinfophone2">{phone}</span>
             </div>
         </div>
     )
