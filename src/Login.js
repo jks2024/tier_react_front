@@ -5,7 +5,7 @@ import imgLogo from './images/tier_logo.png'
 import imgBottom from './images/nedbank_s.png'
 import useStore from './zustand/UserInfo';
 import EnnovaApi from './api/ennovaApi';
-import Modal from './modal.js';
+import Modal from './utill/modal.js';
 
 const Login = () => {
     // 키보드 입력
