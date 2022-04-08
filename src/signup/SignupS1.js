@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import imgArrow from './images/left_b.png'
+import imgArrow from '../images/left_b.png'
 import { Link } from "react-router-dom";
-import EnnovaApi from './api/ennovaApi';
-import Modal from './modal.js';
+import EnnovaApi from '../api/ennovaApi';
+import Modal from '../modal.js';
 
 const SignupS1 = () =>{
     // 키보드 입력

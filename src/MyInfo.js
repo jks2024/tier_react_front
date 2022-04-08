@@ -46,7 +46,6 @@ const Myinfo = () => {
             </div>
         </div>
     )
-
 };
 
 export default Myinfo;

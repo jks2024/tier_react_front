@@ -1,0 +1,1 @@
+export const ENNOVA_DOMAIN = "https://adminsa.ennovalabs.com/rest";

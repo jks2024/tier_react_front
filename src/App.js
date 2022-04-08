@@ -1,8 +1,8 @@
 import './App.css';
 import Login from './Login'
-import SignupS1 from './SignupS1'
-import SignupS2 from './SignupS2'
-import FindId from './FindId'
+import SignupS1 from './signup/SignupS1'
+import SignupS2 from './signup/SignupS2'
+import FindId from './signup/FindId'
 import GoHome from './Home'
 import CraeteWallet from './CreateWallet';
 import Fullmenu from './Fullmenu'

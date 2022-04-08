@@ -1,6 +1,6 @@
 import axios from "axios";
+import * as config from '../config'
 axios.defaults.withCredentials = true;
-const ENNOVA_DOMAIN = "https://adminsa.ennovalabs.com/rest";
 const HEADER = {"Content-type": "application/json; charset=UTF-8"};
 
 // 로그인
@@ -20,7 +20,7 @@ const EnnovaApi = {
 				}
 			}
 		}
-		let reqOptions = {url: ENNOVA_DOMAIN, method: "POST", headers:HEADER, data: bodyContent,}
+		let reqOptions = {url: config.ENNOVA_DOMAIN, method: "POST", headers:HEADER, data: bodyContent,}
     	return await axios.request(reqOptions)
 	},
 
@@ -39,7 +39,7 @@ const EnnovaApi = {
 				}
 			}
 		}
-		let reqOptions = {url: ENNOVA_DOMAIN, method: "POST", headers:HEADER, data: bodyContent,}
+		let reqOptions = {url: config.ENNOVA_DOMAIN, method: "POST", headers:HEADER, data: bodyContent,}
     	return await axios.request(reqOptions)
   	},
 	// 가입된 Phone인지 확인
@@ -57,7 +57,7 @@ const EnnovaApi = {
 				}
 			}
 		}
-		let reqOptions = {url: ENNOVA_DOMAIN, method: "POST", headers:HEADER, data: bodyContent,}
+		let reqOptions = {url: config.ENNOVA_DOMAIN, method: "POST", headers:HEADER, data: bodyContent,}
     	return await axios.request(reqOptions)
 	},
 	// 가입 정보 추가
@@ -82,7 +82,7 @@ const EnnovaApi = {
 				}
 			}
 		}
-		let reqOptions = {url: ENNOVA_DOMAIN, method: "POST", headers:HEADER, data: BODY,}
+		let reqOptions = {url: config.ENNOVA_DOMAIN, method: "POST", headers:HEADER, data: BODY,}
     	return await axios.request(reqOptions)
 	},
 	// 회원 정보 삭제
@@ -101,7 +101,7 @@ const EnnovaApi = {
 				}
 			}
 		}
-		let reqOptions = {url: ENNOVA_DOMAIN, method: "POST", headers:HEADER, data: BODY,}
+		let reqOptions = {url: config.ENNOVA_DOMAIN, method: "POST", headers:HEADER, data: BODY,}
     	return await axios.request(reqOptions)
 	},
 
@@ -120,7 +120,7 @@ const EnnovaApi = {
 				}
 			}
 		}
-		let reqOptions = {url: ENNOVA_DOMAIN, method: "POST", headers:HEADER, data: BODY,}
+		let reqOptions = {url: config.ENNOVA_DOMAIN, method: "POST", headers:HEADER, data: BODY,}
     	return await axios.request(reqOptions)
 	}
 }

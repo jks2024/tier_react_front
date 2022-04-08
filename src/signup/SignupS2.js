@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import imgArrow from './images/left_b.png'
+import imgArrow from '../images/left_b.png'
 import { Link } from "react-router-dom";
 
 const Signup = () =>{
