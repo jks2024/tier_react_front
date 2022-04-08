@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import imgArrow from './images/left_s.png'
 import EnnovaApi from './api/ennovaApi';
+import { Link } from "react-router-dom";
 
 const Myinfo = () => {
     const localId = window.localStorage.getItem("userId");
@@ -25,7 +26,7 @@ const Myinfo = () => {
     return(
         <div className="container">
             <div className="myinfohead">
-                <img src={imgArrow} alt="back" className="backmenu" />
+                <Link to="/Fullmenu"><img src={imgArrow} alt="back" className="backmenu" /></Link>
                 <span className="myinfotypo">MY INFORMATION</span>
             </div>
             <div className="myinfoId">

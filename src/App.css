@@ -285,10 +285,11 @@
 }
 
 .container .EFT .EFTtypo{
-  margin-top: 19px;
+  display: flex;
   margin-left: 4px;
   font-size: 16px;
   font-family: Poppins;
+  align-items: center;
 }
 
 .container .ATM {
@@ -329,10 +330,11 @@
 }
 
 .container .ATM .ATMtypo{
-  margin-top: 19px;
+  display: flex;
   margin-left: 4px;
   font-size: 16px;
   font-family: Poppins;
+  align-items: center;
 }
 
 .container .Peer {
@@ -373,10 +375,11 @@
 }
 
 .container .Peer .Peertypo{
-  margin-top: 19px;
+  display: flex;
   margin-left: 4px;
   font-size: 16px;
   font-family: Poppins;
+  align-items: center;
 }
 
 .container .QR {
@@ -417,10 +420,11 @@
 }
 
 .container .QR .QRtypo{
-  margin-top: 19px;
+  display: flex;
   margin-left: 4px;
   font-size: 16px;
   font-family: Poppins;
+  align-items: center;
 }
 
 .container .history{

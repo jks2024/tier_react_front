@@ -8,6 +8,7 @@ const Fullmenu = () => {
 
     const onClickMyinfo = () => {
         console.log("마이 인포 가기");
+        window.location.replace("/MyInfo");
     }
 
     const onClickPassword = () => {
