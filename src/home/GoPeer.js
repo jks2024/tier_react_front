@@ -39,9 +39,9 @@ const GoPeer = () => {
                 <span className="WalletIDtypo">Wallet ID</span>
                 <input className="InputWalletID" placeholder="Enter the Remittance Type" />
             </div>
-            <div className="Amount">
-                <span className="Amounttypo">Amount</span>
-                <input className="InputAmount" placeholder="Enter the Amount" />
+            <div className="PeerAmount">
+                <span className="PeerAmounttypo">Amount</span>
+                <input className="InputPeerAmount" placeholder="Enter the Amount" />
             </div>
             <div className="ATMbutton">
                 <button className="forbidbutton">CONFIRM</button>
