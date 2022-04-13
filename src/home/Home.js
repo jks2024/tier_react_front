@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import alarmGo from './images/bell.png'
-import receiptGo from './images/receipt.png'
-import nowGo from './images/short_cut.png'
-import logoWhite from './images/tier_logo_white.png'
-import imgPhone from './images/ned_phone.png'
-import qrPay from './images/qr_button_black.png'
+import alarmGo from '../images/bell.png'
+import receiptGo from '../images/receipt.png'
+import nowGo from '../images/short_cut.png'
+import logoWhite from '../images/tier_logo_white.png'
+import imgPhone from '../images/ned_phone.png'
+import qrPay from '../images/qr_button_black.png'
 import { Link } from "react-router-dom";
-import NedBankApi from './api/nedBankApi';
+import NedBankApi from '../api/nedBankApi';
 
 const GoHome = () => {
     
@@ -25,14 +25,17 @@ const GoHome = () => {
 
     const onClickEFT = () => {
         console.log("EFT로 이동");
+        window.location.replace("/GoEFT");
     }
 
     const onClickATM = () => {
         console.log("ATM으로 이동");
+        window.location.replace("/GoATM");
     }
 
     const onClickPeer = () => {
         console.log("Peer로 이동");
+        window.location.replace("/GoPeer");
     }
 
     const onClickQRpay = () => {

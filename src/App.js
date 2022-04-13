@@ -1,14 +1,17 @@
 import './App.css';
-import Login from './Login'
-import SignupS1 from './signup/SignupS1'
-import SignupS2 from './signup/SignupS2'
-import FindId from './signup/FindId'
-import GoHome from './Home'
-import CraeteWallet from './CreateWallet';
-import Fullmenu from './Fullmenu'
-import MyInfo from './MyInfo'
+import Login from './Login';
+import SignupS1 from './signup/SignupS1';
+import SignupS2 from './signup/SignupS2';
+import FindId from './signup/FindId';
+import GoHome from './home/Home';
+import CraeteWallet from './home/CreateWallet';
+import GoEFT from './home/GoEFT'
+import GoATM from './home/GoATM'
+import GoPeer from './home/GoPeer'
+import Fullmenu from './mymenu/Fullmenu';
+import MyInfo from './mymenu/MyInfo';
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import UserStore from './context/UserInfo'
+import UserStore from './context/UserInfo';
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
             <Route path='/CreateWallet' element={<CraeteWallet />} />
             <Route path='/Fullmenu' element={<Fullmenu />} />
             <Route path='/MyInfo' element={<MyInfo />} />
+            <Route path='/GoEFT' element={<GoEFT />} />
+            <Route path='/GoATM' element={<GoATM />} />
+            <Route path='/GoPeer' element={<GoPeer />} />
         </Routes>
       </Router>
     </UserStore>

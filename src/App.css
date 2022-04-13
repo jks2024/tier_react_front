@@ -629,7 +629,7 @@
   display: flex;
   background-color: #ffffff;
   margin-left: 34px;
-  margin-top: 7px;
+  margin-top: 8px;
   margin-right: 103px;
   height: 32px;
   width: 274px;
@@ -813,4 +813,593 @@ flex-direction: column;
 
 .container .myinfophone .myinfophone2 {
   margin-left: 98px;
+}
+
+/*EFT 화면*/
+
+.container .EFTmain{
+  display: flex;
+  height: 84px;
+  align-items: center;
+  
+
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-bottom: 0.5px solid #D9D9D9;
+  opacity: 1;
+}
+
+.container .EFTmain .backhome {
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 26px;
+  display: flex;
+  justify-content:left;
+}
+
+.container .EFTmain .EFTmaintypo {
+  margin-top: 32px;
+  margin-left: 120px;
+  margin-bottom: 27px;
+  font-weight: bold;
+  font-family: poppins;
+}
+
+.container .Withdrawal .Withdrawaltypo {
+  display: flex;
+  margin-left: 24px;
+  margin-top: 20px;
+  margin-bottom: 6px;
+
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: poppins;
+  letter-spacing: 0.26px;
+  color: #313131;
+  opacity: 1;
+}
+
+.container .Withdrawal .Withdrawalinfo {
+  margin-top: 4px;
+  margin-bottom: 11px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 132px;
+  width: 87%;
+
+  border: 0.5px solid #D9D9D9;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.container .Withdrawal .Withdrawalinfo .imgWallet {
+  float: left;
+  margin-top: 19px;
+  margin-left: 20px;
+  margin-right: 18px;
+}
+
+.container .Withdrawal .Withdrawalinfo .walletname {
+  display: flex;
+  margin-top: 18px;
+  font-size: 14px;
+  font-weight: bolder;
+
+  font-family: poppins;
+}
+
+.container .Withdrawal .Withdrawalinfo .walletnumber {
+  font-size: 14px;
+  font-weight: lighter;
+  color: #AEAEAE;
+
+  font-family: poppins;
+}
+
+.container .Withdrawal .Withdrawalinfo .bankbalance {
+  margin-left: 70px;
+  font-size: 12px;
+  font-weight: lighter;
+  color: #AEAEAE;
+
+  font-family: poppins;
+
+}
+
+.container .Withdrawal .Withdrawalinfo .balancesee {
+  margin-left: 70px;
+  font-size: 18px;
+  font-weight: bolder;
+
+  font-family: poppins;
+
+}
+
+.container .Recipient .Recipienttypo {
+  display: flex;
+  margin-left: 24px;
+  margin-top: 16px;
+  margin-bottom: 6px;
+
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: poppins;
+  letter-spacing: 0.26px;
+  color: #313131;
+  opacity: 1;
+}
+
+.container .Recipient .InputRecipient {
+  margin-top: 4px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 56px;
+  width: 87%;
+
+  border: 0.5px solid #D9D9D9;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.container .Own .Owntypo {
+  display: flex;
+  margin-left: 24px;
+  margin-top: 16px;
+  margin-bottom: 6px;
+
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: poppins;
+  letter-spacing: 0.26px;
+  color: #313131;
+  opacity: 1;
+}
+
+.container .Own .InputOwn {
+  margin-top: 4px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 56px;
+  width: 87%;
+
+  border: 0.5px solid #D9D9D9;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.container .External .Externaltypo {
+  display: flex;
+  margin-left: 24px;
+  margin-top: 16px;
+  margin-bottom: 6px;
+
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: poppins;
+  letter-spacing: 0.26px;
+  color: #313131;
+  opacity: 1;
+}
+
+.container .External .InputExternal {
+  margin-top: 4px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 56px;
+  width: 87%;
+
+  border: 0.5px solid #D9D9D9;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.container .Amount .Amounttypo {
+  display: flex;
+  margin-left: 24px;
+  margin-top: 16px;
+  margin-bottom: 6px;
+
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: poppins;
+  letter-spacing: 0.26px;
+  color: #313131;
+  opacity: 1;
+}
+
+.container .Amount .InputAmount {
+  margin-top: 4px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 56px;
+  width: 87%;
+
+  border: 0.5px solid #D9D9D9;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.container .EFTbutton {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.container .EFTbutton .forbidbutton{
+  width: 98%;
+  height: 60px;
+  background: #D9D9D9 0% 0% no-repeat padding-box;
+  border: 0.5px solid #E2E2E2;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: poppins;
+  color: #ffffff;
+}
+
+/*ATM 화면*/
+
+.container .ATMmain{
+  display: flex;
+  height: 84px;
+  align-items: center;
+  
+
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-bottom: 0.5px solid #D9D9D9;
+  opacity: 1;
+}
+
+.container .ATMmain .backhome {
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 26px;
+  display: flex;
+  justify-content:left;
+}
+
+.container .ATMmain .ATMmaintypo {
+  margin-top: 32px;
+  margin-left: 120px;
+  margin-bottom: 27px;
+  font-weight: bold;
+  font-family: poppins;
+}
+
+.container .Withdrawal .Withdrawaltypo {
+  display: flex;
+  margin-left: 24px;
+  margin-top: 20px;
+  margin-bottom: 6px;
+
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: poppins;
+  letter-spacing: 0.26px;
+  color: #313131;
+  opacity: 1;
+}
+
+.container .Withdrawal .Withdrawalinfo {
+  margin-top: 4px;
+  margin-bottom: 11px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 132px;
+  width: 87%;
+
+  border: 0.5px solid #D9D9D9;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.container .Withdrawal .Withdrawalinfo .imgWallet {
+  float: left;
+  margin-top: 19px;
+  margin-left: 20px;
+  margin-right: 18px;
+}
+
+.container .Withdrawal .Withdrawalinfo .walletname {
+  display: flex;
+  margin-top: 18px;
+  font-size: 14px;
+  font-weight: bolder;
+
+  font-family: poppins;
+}
+
+.container .Withdrawal .Withdrawalinfo .walletnumber {
+  font-size: 14px;
+  font-weight: lighter;
+  color: #AEAEAE;
+
+  font-family: poppins;
+}
+
+.container .Withdrawal .Withdrawalinfo .bankbalance {
+  margin-left: 70px;
+  font-size: 12px;
+  font-weight: lighter;
+  color: #AEAEAE;
+
+  font-family: poppins;
+
+}
+
+.container .Withdrawal .Withdrawalinfo .balancesee {
+  margin-left: 70px;
+  font-size: 18px;
+  font-weight: bolder;
+  
+
+  font-family: poppins;
+
+}
+
+.container .ATMRemittance .ATMRemittancetypo {
+  display: flex;
+  margin-left: 24px;
+  margin-top: 16px;
+  margin-bottom: 6px;
+
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: poppins;
+  letter-spacing: 0.26px;
+  color: #313131;
+  opacity: 1;
+}
+
+.container .ATMRemittance .ATMInputRemittance {
+  margin-top: 4px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 56px;
+  width: 87%;
+
+  border: 0.5px solid #D9D9D9;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.container .Amount .Amounttypo {
+  display: flex;
+  margin-left: 24px;
+  margin-top: 16px;
+  margin-bottom: 6px;
+
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: poppins;
+  letter-spacing: 0.26px;
+  color: #313131;
+  opacity: 1;
+}
+
+.container .Amount .InputAmount {
+  margin-top: 4px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 56px;
+  width: 87%;
+
+  border: 0.5px solid #D9D9D9;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.container .ATMbutton {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.container .ATMbutton .forbidbutton{
+  width: 98%;
+  height: 60px;
+  background: #D9D9D9 0% 0% no-repeat padding-box;
+  border: 0.5px solid #E2E2E2;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: poppins;
+  color: #ffffff;
+}
+
+/*Peer to Peer 화면*/
+
+.container .Peermain{
+  display: flex;
+  height: 84px;
+  align-items: center;
+  
+
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-bottom: 0.5px solid #D9D9D9;
+  opacity: 1;
+}
+
+.container .Peermain .backhome {
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 26px;
+  display: flex;
+  justify-content:left;
+}
+
+.container .Peermain .Peermaintypo {
+  margin-top: 32px;
+  margin-left: 89px;
+  margin-bottom: 27px;
+  font-weight: bold;
+  font-family: poppins;
+}
+
+.container .Withdrawal .Withdrawaltypo {
+  display: flex;
+  margin-left: 24px;
+  margin-top: 20px;
+  margin-bottom: 6px;
+
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: poppins;
+  letter-spacing: 0.26px;
+  color: #313131;
+  opacity: 1;
+}
+
+.container .Withdrawal .Withdrawalinfo {
+  margin-top: 4px;
+  margin-bottom: 11px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 132px;
+  width: 87%;
+
+  border: 0.5px solid #D9D9D9;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.container .Withdrawal .Withdrawalinfo .imgWallet {
+  float: left;
+  margin-top: 19px;
+  margin-left: 20px;
+  margin-right: 18px;
+}
+
+.container .Withdrawal .Withdrawalinfo .walletname {
+  display: flex;
+  margin-top: 18px;
+  font-size: 14px;
+  font-weight: bolder;
+
+  font-family: poppins;
+}
+
+.container .Withdrawal .Withdrawalinfo .walletnumber {
+  font-size: 14px;
+  font-weight: lighter;
+  color: #AEAEAE;
+
+  font-family: poppins;
+}
+
+.container .Withdrawal .Withdrawalinfo .bankbalance {
+  margin-left: 70px;
+  font-size: 12px;
+  font-weight: lighter;
+  color: #AEAEAE;
+
+  font-family: poppins;
+
+}
+
+.container .Withdrawal .Withdrawalinfo .balancesee {
+  margin-left: 70px;
+  font-size: 18px;
+  font-weight: bolder;
+
+  font-family: poppins;
+
+}
+
+.container .PeerRemittance {
+  margin-left: 20px;
+  margin-top: 26px;
+  margin-right: 20px;
+}
+
+.container .PeerRemittance .PeerRemittancetypo {
+  font-family: poppins;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.container .PeerRemittance .PeerRemittanceselect {
+  margin-top: 4px;
+  height: 56px;
+  width: 100%;
+  color: #AEAEAE;
+  border: 0.5px solid #E2E2E2;
+  border-radius: 10px;
+}
+
+.container .WalletID .WalletIDtypo {
+  display: flex;
+  margin-left: 24px;
+  margin-top: 36px;
+  margin-bottom: 6px;
+
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: poppins;
+  letter-spacing: 0.26px;
+  color: #313131;
+  opacity: 1;
+}
+
+.container .WalletID .InputWalletID {
+  margin-top: 4px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 56px;
+  width: 87%;
+
+  border: 0.5px solid #D9D9D9;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.container .Amount .Amounttypo {
+  display: flex;
+  margin-left: 24px;
+  margin-top: 36px;
+  margin-bottom: 6px;
+
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: poppins;
+  letter-spacing: 0.26px;
+  color: #313131;
+  opacity: 1;
+}
+
+.container .Amount .InputAmount {
+  margin-top: 4px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 56px;
+  width: 87%;
+
+  border: 0.5px solid #D9D9D9;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.container .ATMbutton {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.container .ATMbutton .forbidbutton{
+  width: 98%;
+  height: 60px;
+  background: #D9D9D9 0% 0% no-repeat padding-box;
+  border: 0.5px solid #E2E2E2;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: poppins;
+  color: #ffffff;
 }

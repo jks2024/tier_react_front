@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import imgArrow from './images/left_s.png'
-import EnnovaApi from './api/ennovaApi';
+import imgArrow from '../images/left_s.png'
+import EnnovaApi from '../api/ennovaApi';
 import { Link } from "react-router-dom";
 
 const Myinfo = () => {

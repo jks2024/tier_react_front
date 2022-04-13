@@ -1,6 +1,22 @@
 import React, {useState, useEffect} from 'react';
+import EnnovaApi from '../api/ennovaApi';
 
 const Fullmenu = () => {
+
+    const localId = window.localStorage.getItem("userId");
+    const [first, setFirst] = useState("");
+    const [last, setLast] = useState("");
+    
+    useEffect(() => {
+        const getData = async() => {
+            let result = await EnnovaApi.userInfoGet(localId);
+            if (result.data.Code == "00") {
+                setFirst(result.data.Body.Result[0].FirstName);
+                setLast(result.data.Body.Result[0].LastName);
+            }
+        }
+        getData()
+    });
 
     const onClickInvite = () => {
         console.log("친구 초대하기");
@@ -47,7 +63,7 @@ const Fullmenu = () => {
     return(
         <div className="container">
             <div className="fullmain">
-                <span className="fulltypo">Hi, Tier!</span>
+                <span className="fulltypo">Hi, {first} {last}!</span>
                 <div className="invite" onClick={onClickInvite}>
                     <span className="invitetypo">Invite your friends to TIER and get points!</span>
                 </div>
