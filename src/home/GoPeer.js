@@ -27,7 +27,7 @@ const GoPeer = () => {
             </div>
             <div className="PeerRemittance">
                 <span className="PeerRemittancetypo">Remittance Type</span><br/>
-                <select className="PeerRemittanceselect" >
+                <select className="PeerRemittanceselect">
                     <optgroup>
                         <option>Please select a Remittance Type</option>
                         <option>Wallet ID</option>
@@ -43,7 +43,7 @@ const GoPeer = () => {
                 <span className="PeerAmounttypo">Amount</span>
                 <input className="InputPeerAmount" placeholder="Enter the Amount" />
             </div>
-            <div className="ATMbutton">
+            <div className="Peerbutton">
                 <button className="forbidbutton">CONFIRM</button>
             </div>
         </div>
