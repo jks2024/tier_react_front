@@ -10,7 +10,8 @@ import GoATM from './home/GoATM'
 import GoPeer from './home/GoPeer'
 import Fullmenu from './mymenu/Fullmenu';
 import MyInfo from './mymenu/MyInfo';
-import AgreeTerms from './AgreeTerms'
+import AgreeTerms from './Tandc/AgreeTerms';
+import ReadApp from './Tandc/PrivacyPolicy';
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import UserStore from './context/UserInfo';
 
@@ -31,6 +32,7 @@ function App() {
             <Route path='/GoATM' element={<GoATM />} />
             <Route path='/GoPeer' element={<GoPeer />} />
             <Route path='/AgreeTerms' element={<AgreeTerms />} />
+            <Route path='/PrivacyPolicy' element={<ReadApp />} />
         </Routes>
       </Router>
     </UserStore>
