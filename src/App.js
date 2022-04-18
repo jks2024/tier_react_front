@@ -11,7 +11,8 @@ import GoPeer from './home/GoPeer'
 import Fullmenu from './mymenu/Fullmenu';
 import MyInfo from './mymenu/MyInfo';
 import AgreeTerms from './Tandc/AgreeTerms';
-import ReadApp from './Tandc/PrivacyPolicy';
+import ReadApp from './Tandc/termsApp';
+import ReadContent from './Tandc/termsContent';
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import UserStore from './context/UserInfo';
 
@@ -32,7 +33,8 @@ function App() {
             <Route path='/GoATM' element={<GoATM />} />
             <Route path='/GoPeer' element={<GoPeer />} />
             <Route path='/AgreeTerms' element={<AgreeTerms />} />
-            <Route path='/PrivacyPolicy' element={<ReadApp />} />
+            <Route path='/termsApp' element={<ReadApp />} />
+            <Route path='/termsContent' element={<ReadContent />} />
         </Routes>
       </Router>
     </UserStore>
