@@ -1,11 +1,20 @@
 import React, {useState, useEffect} from 'react';
 import EnnovaApi from '../api/ennovaApi';
+import Modal from '../utill/modal.js';
 
 const Fullmenu = () => {
 
     const localId = window.localStorage.getItem("userId");
     const [first, setFirst] = useState("");
     const [last, setLast] = useState("");
+
+    // 팝업
+    const [modalOpen, setModalOpen] = useState(false);
+
+    const closeModal = () => {
+        setModalOpen(false);
+        window.location.replace("/");
+    };
     
     useEffect(() => {
         const getData = async() => {
@@ -54,6 +63,7 @@ const Fullmenu = () => {
 
     const onClickSignout = () => {
         console.log("로그아웃");
+        setModalOpen(true);
     }
 
 
@@ -84,6 +94,7 @@ const Fullmenu = () => {
                     <div className="infobox3">
                         <li onClick={onClickDelete}>Delete Account</li>
                         <li onClick={onClickSignout}>Sign Out</li>
+                        <Modal open={modalOpen} close={closeModal} header="안내창">로그아웃 되었습니다.</Modal>
                     </div>
                 </ul>
             </div>
